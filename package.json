@@ -10,16 +10,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:formatter-a-la-mehdi.helloWorld"
+		"onCommand:formatter-a-la-mehdi.displayText"
 	],
-	"main": "./extension.js",
+	"main": "./src/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "formatter-a-la-mehdi.helloWorld",
-				"title": "Hello World"
+				"command": "formatter-a-la-mehdi.displayText",
+				"title": "Formatter display text"
 			}
-		]
+		],
+		"menus": {
+		  	"editor/context": [{
+				"when": "resourceLangId == java",
+				"command": "formatter-a-la-mehdi.displayText",
+				"group": "Formatter@1"
+	  		}]
+		}
 	},
 	"scripts": {
 		"lint": "eslint .",

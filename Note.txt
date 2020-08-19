@@ -1,0 +1,12 @@
+GetProprieteFromSelection(Selection); return list en string de properties
+
+GetProprieteFromFile(File); return list en string de properties
+
+
+FormatGetters(Properties: list<String>); return liste string de getters 
+
+FormatSetters(Properties: list<String>); return liste string de setters 
+
+
+Write(FormatedStuff: list<String>); execute la commande pour ecrire les getters ou setters
+
